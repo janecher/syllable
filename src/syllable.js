@@ -59,3 +59,34 @@ export function arrayCycling7(arr){
     return false;
   }
 }
+
+/*export function syllables(word) {
+  word = word.toLowerCase();
+  if(word.length <= 3) { 
+    return 1; 
+  }
+  return word.replace(/(?:[^laeiouy]es|ed|lle|[^laeiouy]e)$/, '')
+    .replace(/^y/, '')
+    .match(/[aeiouy]{1,2}/g).length;
+} */
+
+/*export function createHaiku5() {
+  let arrayOfWords = [];
+  let numberOfSyllInArray = 0;
+  while(numberOfSyllInArray !== 5) {
+    let newWord = randomWords(); 
+    while (syllables(newWord) > 5) {
+      newWord = randomWords(); 
+    }
+    if ((numberOfSyllInArray + syllables(newWord)) <= 5) {
+      arrayOfWords.push(newWords);
+      numberOfSyllInArray += syllables(newWord);
+    }       
+  }
+  let haiku = "";
+  for(let i = 0; i< arrayOfWords.length -1; i++) {
+    haiku += arrayOfWords[i] + " ";
+  }
+  haiku += arrayOfWords[arrayOfWords.length -1];
+  return haiku;
+}*/

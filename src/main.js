@@ -3,7 +3,29 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import $ from 'jquery';
 import './syllable.js';
-import { Haiku, allLetter, arrayCycling5, arrayCycling7 } from './syllable.js';
+import { Haiku, allLetter, arrayCycling5, arrayCycling7, syllables } from './syllable.js';
+var randomWords = require('random-words');
+
+function createHaiku5() {
+  let arrayOfWords = [];
+  let numberOfSyllInArray = 0;
+  while(numberOfSyllInArray !== 5) {
+    let newWord = randomWords(); 
+    while (syllables(newWord) > 5) {
+      newWord = randomWords(); 
+    }
+    if ((numberOfSyllInArray + syllables(newWord)) <= 5) {
+      arrayOfWords.push(newWord);
+      numberOfSyllInArray += syllables(newWord);
+    }       
+  }
+  let haiku = "";
+  for(let i = 0; i< arrayOfWords.length -1; i++) {
+    haiku += arrayOfWords[i] + " ";
+  }
+  haiku += arrayOfWords[arrayOfWords.length -1];
+  return haiku;
+}
 
 // UI Logic
 $(document).ready(function() {
@@ -38,6 +60,7 @@ $(document).ready(function() {
       $("ul#answer").append("<li>"+poem.line1+"</li>");
       $("ul#answer").append("<li>"+poem.line2+"</li>");
       $("ul#answer").append("<li>"+poem.line3+"</li>");
+      console.log(createHaiku5());
     } else {
       $("div#input").text("This is not a Haiku poem");
     }
