@@ -7,28 +7,36 @@
   <body>
     <div class="container">
       <h1>Syllable Counter</h1>
-      <form id="haiku">
-        <div class="form-group">
-          <label for="line1">Line 1</label>
-          <input type="text"  class="form-control" id="line1" required>
-        </div>
-        <div class="form-group">
-          <label for="line2">Line 2</label>
-          <input type="text"  class="form-control" id="line2" required>
-        </div>
-        <div class="form-group">
-          <label for="line3">Line 3</label>
-          <input type="text"  class="form-control" id="line3" required>
-        </div>
-        <button type="submit" class="btn btn-outline-dark">Submit Haiku!</button>
-      </form>
-      <div id="input">
+      <div class ="row">
+        <div class="col-md-6">
+          <form id="haiku">
+            <div class="form-group">
+              <label for="line1">Line 1</label>
+              <input type="text"  class="form-control" id="line1" required>
+            </div>
+            <div class="form-group">
+              <label for="line2">Line 2</label>
+              <input type="text"  class="form-control" id="line2" required>
+            </div>
+            <div class="form-group">
+              <label for="line3">Line 3</label>
+              <input type="text"  class="form-control" id="line3" required>
+            </div>
+            <button type="submit" class="btn btn-outline-dark">Submit Haiku!</button>
+          </form>
+          <div id="input">
 
-      </div>
-      <ul id="answer">
-        
-      </ul>
+          </div>
+          <ul id="answer">
+            
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <button type="submit" id = "generateRandom" class="btn btn-outline-dark">Create a random Haiku!</button>
+          <ul id="randomHaiku">
+            
+          </ul>
+        </div>
     </div>
   </body>
-  
 </html>
