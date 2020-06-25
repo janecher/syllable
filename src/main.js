@@ -2,7 +2,6 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import $ from 'jquery';
-import './syllable.js';
 import { Haiku, allLetter, arrayCycling5, arrayCycling7, createHaiku5, createHaiku7 } from './syllable.js';
 
 // UI Logic
