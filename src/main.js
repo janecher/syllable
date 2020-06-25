@@ -41,6 +41,9 @@ $(document).ready(function() {
     } else {
       $("div#input").text("This is not a Haiku poem");
     }
+    $("input#line1").val("");
+    $("input#line2").val("");
+    $("input#line3").val("");
   });
   $("#generateRandom").click(function() {    
     $("ul#randomHaiku").append("<li>"+createHaiku5()+"</li>");

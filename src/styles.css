@@ -1,0 +1,33 @@
+.row {
+  border-top: 2px solid salmon;
+}
+
+.col-md-6 {
+  margin-top: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: salmon;
+}
+
+#answer{
+  list-style-type: none;
+}
+
+#randomHaiku{
+  list-style-type: none;
+}
+
+.generate {
+  text-align: center;
+}
+
+.btn {
+  color: salmon;
+  margin-bottom: 20px;
+}
+
+#input {
+  margin-bottom: 20px;
+}
